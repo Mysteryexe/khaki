@@ -5,7 +5,7 @@ function waitForElement(elementPath, callBack) {
     } else {
       waitForElement(elementPath, callBack);
     }
-  }, 500);
+  }, 50);
 }
 if (!detectMob()) {
   document.addEventListener("mousemove", parallax);
@@ -61,20 +61,6 @@ function smoothScroll() {
     "--scroll-padding",
     navheight - 1 + "px"
   );
-}
-function toggleMobMenu() {
-  const clickx = document.getElementById("pencet");
-  const navbar = document.getElementsByTagName("nav")[0];
-  clickx.addEventListener("click", function () {
-    clickx.classList.toggle("Diam");
-    if (navbar.value == "1") {
-      navbar.style.top = "-65vh";
-      navbar.value = "0";
-    } else {
-      navbar.style.top = "0vh";
-      navbar.value = "1";
-    }
-  });
 }
 function load() {
   navbarTran();
