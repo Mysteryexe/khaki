@@ -1,3 +1,12 @@
+function waitForElement(elementPath, callBack) {
+  window.setTimeout(function () {
+    if ($(elementPath).length) {
+      callBack(elementPath, $(elementPath));
+    } else {
+      waitForElement(elementPath, callBack);
+    }
+  }, 500);
+}
 if (!detectMob()) {
   document.addEventListener("mousemove", parallax);
   function parallax(event) {
@@ -53,10 +62,7 @@ function smoothScroll() {
     navheight - 1 + "px"
   );
 }
-function load() {
-  navbarTran();
-  smoothScroll();
-  //toggle mobile menu
+function toggleMobMenu() {
   const clickx = document.getElementById("pencet");
   const navbar = document.getElementsByTagName("nav")[0];
   clickx.addEventListener("click", function () {
@@ -68,5 +74,24 @@ function load() {
       navbar.style.top = "0vh";
       navbar.value = "1";
     }
+  });
+}
+function load() {
+  navbarTran();
+  smoothScroll();
+  //toggle mobile menu
+  waitForElement("#pencet", function () {
+    const clickx = document.getElementById("pencet");
+    const navbar = document.getElementsByTagName("nav")[0];
+    clickx.addEventListener("click", function () {
+      clickx.classList.toggle("Diam");
+      if (navbar.value == "1") {
+        navbar.style.top = "-65vh";
+        navbar.value = "0";
+      } else {
+        navbar.style.top = "0vh";
+        navbar.value = "1";
+      }
+    });
   });
 }
