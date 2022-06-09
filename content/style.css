@@ -217,7 +217,7 @@ h1.name::after {
   width: 100vw;
   float: top;
   background-color: #c2ded1;
-  background-image: url("/content/images/bgGradient2.png");
+  background-image: url("../content/images/bgGradient2.png");
   background-size: cover;
 }
 #screen2 {
@@ -228,7 +228,7 @@ h1.name::after {
   width: 100vw;
   float: top;
   background-color: #ece5c7;
-  background-image: url("/content/images/bgGradient1.png");
+  background-image: url("../content/images/bgGradient1.png");
   background-size: cover;
 }
 .centerin {
