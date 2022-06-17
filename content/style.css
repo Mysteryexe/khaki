@@ -17,6 +17,13 @@ body {
   margin: 0;
   overflow: overlay;
 }
+::-moz-selection {
+  background: rgba(251, 251, 251, 0.6);
+}
+
+::selection {
+  background: rgba(251, 251, 251, 0.6);
+}
 img {
   user-select: none;
   -webkit-user-drag: none;
@@ -32,10 +39,11 @@ h1 {
 h2 {
   margin-top: 0px;
   margin-bottom: 1vh;
-  font-size: clamp(2.5rem, 4vw, 5rem);
+  font-size: clamp(2.5rem, 3.5vw, 5rem);
   font-family: "Cabin", sans-serif;
   letter-spacing: 3px;
   user-select: none;
+  text-transform: uppercase;
 }
 h2p {
   font-size: clamp(1.4rem, 3vw, 4rem);
@@ -53,6 +61,14 @@ footer {
   min-height: 20vh;
   width: 100vw;
   background-color: #354259;
+}
+bar::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: url(../content/images/bgGradient2.png);
+  background-size: cover;
+  opacity: 0.3;
 }
 bar {
   z-index: 15;
@@ -91,11 +107,24 @@ nav a {
   font-weight: 500;
   font-size: clamp(1.2rem, 1.4vw, 3rem);
   color: rgb(0, 0, 0);
+  opacity: 0.8;
+}
+nav a:hover {
+  transform: translateY(1vh);
+  padding-top: -1vh;
+  opacity: 1;
+}
+a {
+  text-decoration: none;
+  color: #2f8f9d;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .bio {
   flex-direction: row !important;
   justify-content: space-evenly !important;
   align-items: stretch !important;
+  margin-bottom: 2.7rem;
 }
 .movingBG {
   position: absolute;
@@ -158,18 +187,49 @@ nav a {
   aspect-ratio: 0.76;
   margin-bottom: -1.6vw;
 }
+.apps {
+  width: 80vw;
+  height: max-content;
+  flex-wrap: wrap !important;
+}
+.appDiv {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.2rem;
+}
+.apps {
+  margin-top: 2.2rem;
+}
+.date {
+  float: left;
+  width: 20%;
+  height: max-content;
+  margin: 0px;
+  padding-left: 5%;
+  padding-right: 2.5%;
+  font-family: "Cabin", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(1.4rem, 2vw, 5rem);
+  letter-spacing: 3px;
+}
+.appDiv p.text {
+  float: right;
+  width: 65%;
+  height: max-content;
+  margin: 0px;
+  padding-right: 5%;
+  padding-left: 2.5%;
+  font-family: "Lato", sans-serif;
+  font-size: clamp(1.2rem, 1.4vw, 2.5rem);
+  text-align: justify;
+  text-justify: auto;
+  border-left: 1px solid rgb(0, 0, 0, 0.3);
+}
 .fill {
   width: 100%;
   height: 100%;
-}
-a {
-  text-decoration: none;
-  color: #2f8f9d;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-nav a:hover {
-  transform: translateY(1vh);
-  padding-top: -1vh;
 }
 .underline {
   position: relative;
@@ -213,7 +273,8 @@ h1.name::after {
 }
 #screen1 {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: max-content;
   width: 100vw;
   float: top;
   background-color: #c2ded1;
@@ -344,5 +405,13 @@ h1.name {
   .pfp,
   .pfptxt {
     width: 80vw;
+  }
+  .date {
+    width: 25%;
+    padding-left: 0;
+  }
+  .appDiv p.text {
+    width: 67.5%;
+    padding-right: 0;
   }
 }
