@@ -33,27 +33,6 @@ function detectMob() {
     return navigator.userAgent.match(toMatchItem);
   });
 }
-function navbarTran() {
-  setTimeout(function () {
-    const navbar = document.getElementById("navbar");
-    if (window.scrollY > navbar.offsetHeight) {
-      if (detectMob()) {
-        navbar.style.backgroundColor = "#c2ded1";
-      } else {
-        navbar.style.backgroundColor = "#c2ded10";
-        navbar.style.backdropFilter = "blur(0.15vh)";
-        navbar.style.webkit;
-      }
-      navbar.style.boxShadow =
-        "0px 0px 5px 0px rgba(0, 0, 0, 0.1) , 0px 0px 1px 0px rgba(0, 0, 0, 0.1)";
-    } else {
-      navbar.style.backgroundColor = " #c2ded100";
-      navbar.style.backdropFilter = "blur(0px)";
-      navbar.style.boxShadow = "none";
-    }
-    navbarTran();
-  }, 600);
-}
 function smoothScroll() {
   navbar = document.getElementById("navbar");
   const navheight = navbar.offsetHeight;
@@ -63,7 +42,6 @@ function smoothScroll() {
   );
 }
 function load() {
-  navbarTran();
   smoothScroll();
   //toggle mobile menu
   waitForElement("#pencet", function () {
@@ -81,3 +59,32 @@ function load() {
     });
   });
 }
+var text = document.querySelectorAll(".waitForScroll");
+function scrolListener(e) {
+  var screenTop = document.scrollingElement.scrollTop;
+  var screenBottom = screenTop + innerHeight;
+  for (var i = 0; i < text.length; i += 1) {
+    var textTop = text[i].getBoundingClientRect().top;
+    if (textTop < screenBottom && textTop < screenTop) {
+      text[i].classList.add("scrollPassed");
+      text[i].classList.remove("waitForScroll");
+    }
+  }
+  const navbar = document.getElementById("navbar");
+  if (window.scrollY > navbar.offsetHeight) {
+    if (detectMob()) {
+      navbar.style.backgroundColor = "#c2ded1";
+    } else {
+      navbar.style.backgroundColor = "#c2ded10";
+      navbar.style.backdropFilter = "blur(0.15vh)";
+      navbar.style.webkit;
+    }
+    navbar.style.boxShadow =
+      "0px 0px 5px 0px rgba(0, 0, 0, 0.1) , 0px 0px 1px 0px rgba(0, 0, 0, 0.1)";
+  } else {
+    navbar.style.backgroundColor = " #c2ded100";
+    navbar.style.backdropFilter = "blur(0px)";
+    navbar.style.boxShadow = "none";
+  }
+}
+document.onscroll = scrolListener;
