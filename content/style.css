@@ -319,6 +319,7 @@ h1.name::after {
   background-color: #ece5c7;
   background-image: url("../content/images/bgGradient1.png");
   background-size: cover;
+  overflow: hidden;
 }
 .centerin {
   display: flex;
