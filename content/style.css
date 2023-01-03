@@ -70,6 +70,16 @@ h2p {
   font-family: "Jost", sans-serif;
   user-select: none;
 }
+h3 {
+  font-size: clamp(2rem, 3.5vw, 5.6rem);
+  margin: 0px;
+  height: fit-content;
+  font-family: "Jost", sans-serif;
+  user-select: none;
+  text-align: left;
+  width: 100%;
+  padding-left: 5%;
+}
 p {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -326,6 +336,7 @@ h1.name::after {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .square {
   aspect-ratio: 1;
