@@ -84,15 +84,15 @@ function load() {
 }
 var text = document.querySelectorAll(".waitForScroll");
 function scrolListener(e) {
-  var screenTop = document.scrollingElement.scrollTop;
-  var screenBottom = screenTop + innerHeight;
-  for (var i = 0; i < text.length; i += 1) {
-    var textTop = text[i].getBoundingClientRect().top;
-    if (textTop < screenBottom && textTop < screenTop) {
-      text[i].classList.add("scrollPassed");
-      text[i].classList.remove("waitForScroll");
-    }
-  }
+  // var screenTop = document.scrollingElement.scrollTop;
+  // var screenBottom = screenTop + innerHeight;
+  // for (var i = 0; i < text.length; i += 1) {
+  //   var textTop = text[i].getBoundingClientRect().top;
+  //   if (textTop < screenBottom && textTop < screenTop) {
+  //     text[i].classList.add("scrollPassed");
+  //     text[i].classList.remove("waitForScroll");
+  //   }
+  // }
   const navbar = document.getElementById("navbar");
   if (window.scrollY > navbar.offsetHeight) {
     if (detectMob()) {
