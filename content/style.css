@@ -94,7 +94,7 @@ footer {
   min-height: 20vh;
   width: calc(100vw - 2rem);
   background-color: #8aa897;
-  background-image: url(../content/images/bgGradient3.png);
+  background-image: url(../content/images/bgGradient3.webp);
   background-size: cover;
   overflow: hidden;
   display: flex;
@@ -106,7 +106,7 @@ bar::before {
   content: "";
   height: 100%;
   width: 100%;
-  background-image: url(../content/images/bgGradient2.png);
+  background-image: url(../content/images/bgGradient2.webp);
   background-size: cover;
   opacity: 0.3;
 }
@@ -175,7 +175,7 @@ lib {
   width: 1fr;
   padding: 2rem;
   background-color: #50695d;
-  background-image: url(../content/images/bgGradient3.png);
+  background-image: url(../content/images/bgGradient3.webp);
   background-size: cover;
   margin-bottom: 2%;
   border-radius: 20px;
@@ -400,7 +400,7 @@ h1.name::after {
   width: 100vw;
   float: top;
   background-color: #c2ded1;
-  background-image: url("../content/images/bgGradient2.png");
+  background-image: url("../content/images/bgGradient2.webp");
   background-size: cover;
 }
 #screen2 {
@@ -410,7 +410,7 @@ h1.name::after {
   width: 100vw;
   float: top;
   background-color: #ece5c7;
-  background-image: url("../content/images/bgGradient1.png");
+  background-image: url("../content/images/bgGradient1.webp");
   background-size: cover;
   overflow: hidden;
 }
