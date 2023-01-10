@@ -86,7 +86,6 @@ h3 {
 }
 p {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  white-space: pre-line;
 }
 footer {
   position: relative;
@@ -101,6 +100,7 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  white-space: pre-line;
 }
 bar::before {
   content: "";
