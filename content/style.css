@@ -292,6 +292,8 @@ images img {
   position: relative;
   height: 50vh;
   width: auto;
+  max-width: 80vw;
+  max-height: 105vw;
   aspect-ratio: 0.76;
   margin-bottom: -1.6vw;
 }
@@ -396,6 +398,7 @@ h1.name::after {
 #screen1 {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
   max-height: max-content;
   width: 100vw;
   float: top;
