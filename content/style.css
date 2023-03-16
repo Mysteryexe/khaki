@@ -1,11 +1,13 @@
 @font-face {
   font-family: "San Francisco";
+  font-display: swap;
   font-weight: 400;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 }
 @font-face {
   font-family: "Demonstration";
   src: url(../fonts/Demonstration.ttf);
+  font-display: swap;
 }
 @keyframes reveal {
   0% {
