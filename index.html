@@ -8,8 +8,13 @@
   <link rel="stylesheet" href="content/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="content/scrollbar.css" type="text/css" media="all" />
   <title>Azadeh Khaki Ghasr</title>
-  <link rel="icon" href="https://cdn.discordapp.com/attachments/967049006809251841/985144141161857074/icon.ico"
-    type="image/ico" sizes="48x68">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap");
@@ -34,10 +39,10 @@
 <body onload="load()">
   <bar class="add-nav" id="navbar"></bar>
   <div id="screen1" class="centerin">
-    <div class="pattern">
+    <div class="pattern fade-animation">
       <img src="content/images/pattern.webp" class="fill" />
     </div>
-    <div>
+    <div class="fade-animation">
       <h1 class="name">Azadeh Khaki Ghasr</h1>
       <p class="name">
         Member of the faculty at Shahid Beheshti University<br />
@@ -47,14 +52,15 @@
         Office
       </p>
     </div>
-    <a class="button js-scroll-trigger" href="#screen2">BIOGRAPH<span style="letter-spacing: 0">Y</span></a>
+    <a class="button js-scroll-trigger fade-animation" href="#screen2">BIOGRAPH<span
+        style="letter-spacing: 0">Y</span></a>
   </div>
   <div id="screen2">
-    <div class="centerin waitForScroll">
+    <div class="centerin waitForScroll fade-animation">
       <h2p>------------ About me ------------</h2p>
       <h2>BIOGRAPH<span style="letter-spacing: 0">Y</h2>
     </div>
-    <div class="centerin bio waitForScroll">
+    <div class="centerin bio waitForScroll fade-animation">
       <div class="pfpContainer centerin">
         <div class="bgHolder">
           <img class="movingBG mouse" value="-1" src="content/images/bgpfp.webp">
@@ -72,7 +78,7 @@
         </p>
       </div>
     </div>
-    <div class="centerin waitForScroll">
+    <div class="centerin waitForScroll fade-animation">
       <h2>Educatio<span style="letter-spacing: 0">n</h2>
       <div class="centerin bio apps" style="margin-bottom: 0px">
         <div class="appDiv" id="1">
